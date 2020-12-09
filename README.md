@@ -1,6 +1,3 @@
-# Portifolio-dev-mena
-Portifolio Pessoal
-
 <h1>Portifolio DevMena</h1>
 
 <p>portifolio pessoal desenvolvido com:</p>
