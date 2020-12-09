@@ -1,7 +1,7 @@
 {
-  "name": "alianzacosmeticos",
+  "name": "PortifolioDevMena",
   "version": "1.0.0",
-  "description": "Site www.alianzacosmeticos.com.br",
+  "description": "Site www.devMena.com.br",
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
