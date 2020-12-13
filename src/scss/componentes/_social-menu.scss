@@ -1,0 +1,37 @@
+.social-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  &.header-social {
+    justify-content: flex-end;
+    margin-right: 30px;
+    margin-bottom: 40px;
+  }
+  li {
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+    a {
+      transition: $ease-0;
+      svg {
+        width: 18px;
+        max-height: 18px;
+        fill: $white;
+      }
+      &:hover {
+        svg {
+          fill: $color-1;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 325px) {
+    &.header-social {
+      margin-bottom: 30px;
+    }
+  }
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}

@@ -1,0 +1,91 @@
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@function rem($size) {
+  @return parseInt($size) / parseInt($font-size) * 1rem;
+}
+
+@mixin vertical-center {
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+@mixin abs-position($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin arrow($direction, $size, $color) {
+  width: 0;
+  height: 0;
+  @if ($direction == left) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  } @else if ($direction == right) {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if ($direction == down) {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  } @else {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == fullhd {
+    @media only screen and (min-width: 1900px) {
+      @content;
+    }
+  } @else if $point == hd {
+    @media only screen and (min-width: 1280px) {
+      @content;
+    }
+  } @else if $point == desktop {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media only screen and (min-width: 767px) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media only screen and (max-width: 325px) {
+      @content;
+    }
+  }
+}
+
+@mixin titulo($size: false, $colour: false, $lh: false) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin texto($size: false, $colour: false, $lh: false) {
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}

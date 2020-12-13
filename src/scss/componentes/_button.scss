@@ -1,0 +1,246 @@
+﻿.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  transition: $ease-0;
+  &:hover {
+    transition: $ease-0;
+    text-decoration: none;
+  }
+  &__saiba {
+    padding: 10px 15px;
+    background: $color-1;
+    @include texto(10px, $black);
+    border-radius: 5px;
+    width: fit-content;
+    @include breakpoint(tablet) {
+      padding: 12px 20px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 14px;
+      &:hover {
+        background: #a61680;
+        color: $white;
+      }
+    }
+  }
+  &__enviar {
+    padding: 10px 15px;
+    background: $color-7;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    @include texto(10px, $white);
+    border-radius: 5px;
+    width: fit-content;
+    @include breakpoint(tablet) {
+      padding: 12px 20px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 14px;
+      &:hover {
+        background: $color-7;
+        color: $white;
+      }
+    }
+  }
+  &__cardbemVindo {
+    padding: 15px 20px;
+    background: $color-1;
+    @include texto(14px, $white);
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: 35px;
+    @include breakpoint(tablet) {
+      padding: 12px 20px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 14px;
+    }
+  }
+  &__eventos {
+    padding: 15px 45px;
+    background: $color-1;
+    @include texto(14px, $black);
+    font-weight: 700;
+    border-radius: 5px;
+    width: fit-content;
+    text-transform: uppercase;
+    margin-top: 35px;
+    @include breakpoint(tablet) {
+      padding: 12px 20px;
+      width: 150px;
+      height: 40px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 14px;
+      transition: $ease-0;
+    }
+  }
+  &__saibaEventos {
+    background: $color-1;
+    @include texto(14px, $black);
+    font-weight: 700;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 0 auto 30px;
+    @include breakpoint(tablet) {
+      padding: 12px 20px;
+      width: 150px;
+      height: 40px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 14px;
+      &:hover {
+        background: #a61680;
+        color: $white;
+      }
+    }
+  }
+  &__eventos-page {
+    padding: 15px 45px;
+    background: $color-1;
+    @include texto(14px, $black);
+    font-weight: 700;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0 auto 35px;
+    text-align: center;
+    text-transform: uppercase;
+    @include breakpoint(tablet) {
+      padding: 12px 20px;
+      width: 150px;
+      height: 40px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 14px;
+    }
+  }
+  &__blogs {
+    padding: 15px 45px;
+    background: $color-1;
+    @include texto(14px, $white);
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: 20px;
+    display: block;
+    @include breakpoint(tablet) {
+      text-align: center;
+      padding: 12px 20px;
+      height: 40px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 14px;
+      width: 150px;
+      &:hover {
+        background: #a61680;
+        color: $white;
+      }
+    }
+  }
+  &__blogHome {
+    padding: 15px 45px;
+    background: $color-1;
+    @include texto(14px, $white);
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    width: fit-content;
+    margin-top: 35px;
+    @include breakpoint(tablet) {
+      padding: 10px;
+      height: 40px;
+    }
+    @include breakpoint(desktop) {
+      padding: 15px 45px;
+      font-size: 14px;
+      width: 150px;
+      &:hover {
+        background: #a61680;
+        color: $white;
+      }
+    }
+  }
+  &__estudo {
+    padding: 12px 10px;
+    background: #fff;
+    @include texto(14px, $gray-0);
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: fit-content;
+    @include breakpoint(tablet) {
+      padding: 12px 20px;
+    }
+  }
+  &__agendar {
+    padding: 12px 10px;
+    background: #fff;
+    @include texto(14px, $gray-0);
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 150px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    @include breakpoint(tablet) {
+      padding: 12px 20px;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+    }
+  }
+  &__prof {
+    padding: 12px 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background: #fff;
+    @include texto(14px, $gray-0);
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 150px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    @include breakpoint(tablet) {
+      padding: 12px 20px;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+    }
+  }
+  &__filtro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-1;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    transition: $ease-0;
+    width: 30%;
+    height: 40px;
+    font-weight: 700;
+    outline: none;
+    .labelInfantil,
+    .labelAdulto {
+      @include titulo(16px, $black);
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}

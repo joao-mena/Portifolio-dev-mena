@@ -1,0 +1,88 @@
+.eventos-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-8;
+  h1 {
+    display: none;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    &__content {
+      position: relative;
+    }
+    &__infos {
+      align-items: flex-start !important;
+      position: absolute;
+      padding: 0 40px;
+      top: 35%;
+      transform: translateY(-60%);
+    }
+    .textos {
+      padding: 0 40px;
+      margin: 30px 0;
+    }
+  }
+  @include breakpoint(tablet) {
+    h1 {
+      display: block;
+    }
+    .cards {
+      flex-direction: column !important;
+      align-items: center;
+      &__content {
+        width: 80%;
+      }
+      &__infos {
+        // top: 15px;
+        // transform: translateY(0);
+        h4 {
+          font-size: 14px;
+          margin: 0;
+        }
+        a {
+          margin-bottom: 15px;
+          text-align: center;
+          border: none;
+        }
+        p {
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
+  }
+  @include breakpoint(desktop) {
+    div[class="cards"] {
+      display: grid !important;
+      gap: 40px 5px;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: flex-start !important;
+      margin-bottom: 30px;
+    }
+    .cards {
+      &__content {
+        width: 100%;
+      }
+      &__infos {
+        display: flex;
+        flex-direction: column !important;
+        top: 40%;
+        padding: 0 75px;
+        transform: translateY(-80%);
+        a {
+          margin: 0 0 25px 0;
+          border: none;
+        }
+      }
+    }
+  }
+  @include breakpoint(fullhd) {
+    .cards {
+      &__content {
+        justify-content: center;
+      }
+    }
+  }
+}

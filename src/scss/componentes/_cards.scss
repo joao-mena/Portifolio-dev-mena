@@ -1,0 +1,9 @@
+*[class^="cards"]:not(*[class*="content"]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

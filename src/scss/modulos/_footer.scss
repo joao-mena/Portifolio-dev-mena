@@ -1,0 +1,241 @@
+.footer {
+  background: $white;
+  padding: 20px 0 0 0;
+  color: $gray-0;
+  position: relative;
+  &::before {
+    content: "";
+    width: 80%;
+    margin: 0 auto;
+    height: 3px;
+    background-color: $color-6;
+    top: 10px;
+    display: block;
+  }
+  p {
+    @include texto(14px, $gray-0, 18px);
+    a {
+      color: $gray-0;
+      transition: $ease-0;
+      &:hover {
+        transition: $ease-0;
+        color: $color-1;
+      }
+    }
+  }
+  .content {
+    padding: 40px 20px 20px;
+    .infos {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 75%;
+      margin: 0 auto 20px;
+      .logo {
+        width: 65%;
+        svg {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .social-menu {
+        margin-top: 15px;
+        li {
+          a {
+            svg {
+              fill: $gray-1;
+              width: 21px;
+              max-height: 21px;
+            }
+          }
+        }
+      }
+      .complemento {
+        margin-top: 15px;
+        @include texto(14px, $gray-0, 19px);
+      }
+    }
+    .endereco {
+      width: 75%;
+      margin: 20px auto 0;
+      .title__footer {
+        @include titulo(18px, $color-0);
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      address {
+        @include texto(14px, $gray-0, 19px);
+      }
+    }
+    .contatos {
+      width: 75%;
+      margin: 0 auto;
+      .title__footer {
+        @include titulo(18px, $color-0);
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .copy {
+    padding: 5px 20px;
+    p {
+      @include texto(10px, $gray-1, 14px);
+      text-align: center;
+    }
+  }
+  @include breakpoint(tablet) {
+    margin: 0 auto;
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1px 1px;
+      justify-items: center;
+      grid-template-areas:
+        "infos infos infos infos"
+        "contatos contatos endereco endereco";
+      .infos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto auto;
+        gap: 10px 0px;
+        grid-template-areas:
+          "logo"
+          "social"
+          "complemento";
+        grid-area: infos;
+        .logo {
+          grid-area: logo;
+          margin: 0 auto;
+          width: 30%;
+        }
+        .social-menu {
+          grid-area: social;
+          justify-content: center;
+        }
+        .complemento {
+          grid-area: complemento;
+        }
+      }
+      .endereco,
+      .contatos,
+      .title__footer {
+        margin: 20px 0;
+      }
+      .contatos {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content;
+        gap: 1px 1px;
+        grid-area: contatos;
+      }
+      .endereco {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
+        gap: 1px 1px;
+        grid-area: endereco;
+      }
+    }
+    .copy {
+      p {
+        text-align: right;
+      }
+      br {
+        display: none;
+      }
+    }
+  }
+  @include breakpoint(desktop) {
+    &::before {
+      width: 90%;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 1fr auto 0.5fr;
+      grid-template-rows: 1fr auto;
+      gap: 1px 5%;
+      grid-template-areas:
+        "infos contatos endereco"
+        "infos contatos endereco";
+      .infos {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 1px 10%;
+        grid-template-areas:
+          "logo complemento"
+          "social complemento";
+        grid-area: infos;
+        width: 100%;
+        margin: 0;
+        .logo {
+          grid-area: logo;
+          width: 50%;
+          svg {
+            &:hover {
+              fill: $color-0;
+            }
+          }
+        }
+        .social-menu {
+          display: flex;
+          a {
+            transition: $ease-0;
+            svg {
+              width: 17px;
+              max-height: 17px;
+              fill: $white;
+            }
+            &:hover {
+              svg {
+                fill: $color-1;
+              }
+            }
+          }
+        }
+        .complemento {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 1fr;
+          gap: 1px 1px;
+          grid-area: complemento;
+        }
+      }
+      .endereco,
+      .contatos,
+      .title__footer {
+        margin: 0;
+      }
+      .endereco {
+        width: 100%;
+        .title__footer {
+          text-align: left;
+        }
+      }
+      .contatos {
+        grid-template-columns: min-content;
+        grid-template-rows: min-content min-content min-content;
+        width: 100%;
+        .title__footer {
+          text-align: left;
+        }
+      }
+    }
+  }
+  @include breakpoint(fullhd) {
+    .content {
+      gap: 1px 5%;
+      .infos {
+        gap: 1px 5%;
+        .logo {
+          width: 70%;
+        }
+      }
+      .contatos {
+        grid-template-columns: min-content;
+      }
+    }
+  }
+}

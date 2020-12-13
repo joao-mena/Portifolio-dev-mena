@@ -1,0 +1,48 @@
+.eventos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-8;
+  padding-bottom: 50px;
+  .cards {
+    &__link {
+      position: relative;
+      justify-content: center;
+      .btn__eventos {
+        position: absolute;
+        margin: 0 auto;
+      }
+    }
+    .infos {
+      padding: 20px 60px;
+    }
+  }
+  @include breakpoint(tablet) {
+    .cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start !important;
+      &__link {
+        .btn__eventos {
+          left: 50%;
+          transform: translateX(-50%);
+          text-align: center;
+          border: none;
+        }
+      }
+      &__content {
+        width: 30%;
+        &:first-of-type {
+          .infos {
+            padding-left: 10%;
+          }
+        }
+        .infos {
+          margin-top: 15px;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

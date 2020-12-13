@@ -1,0 +1,200 @@
+.quemSomos {
+  div[class$="-main"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .grid-container {
+    article {
+      margin-bottom: 20px;
+    }
+    .missao {
+      background: $color-6;
+      h1,
+      p {
+        color: $white;
+      }
+    }
+    .estrutura {
+      .estrutura-main {
+        .estrutura-title {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .estrutura-content {
+          display: none;
+        }
+      }
+      .estrutura-carousel {
+        #secondary-slider {
+          position: relative;
+          margin-top: 20px;
+          .splide__arrows {
+            height: 60px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .splide__arrow {
+              display: flex;
+              align-items: center;
+              background: $color-1;
+              border: none;
+              outline: none;
+              border-radius: 0;
+              width: 8%;
+              height: 100%;
+              svg {
+                width: 30px;
+                height: 30px;
+                * {
+                  fill: $white;
+                }
+              }
+              &--prev {
+                left: 0;
+              }
+              &--next {
+                right: 0;
+              }
+            }
+          }
+          .splide__track {
+            display: flex;
+            width: 84%;
+            margin: 0 auto;
+            .splide__list {
+              .splide__slide {
+                img {
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(desktop) {
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+    .grid-container {
+      display: flex;
+      flex-direction: column;
+      article {
+        margin-bottom: 75px;
+      }
+      .sobre {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 5%;
+        justify-content: space-between;
+        margin-top: 50px;
+        .sobre-main {
+          width: 15%;
+        }
+        .sobre-content {
+          width: 35%;
+          padding: 0 25px;
+        }
+        .sobre-img {
+          width: 50%;
+          height: 100%;
+        }
+      }
+      .missao {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-right: 5%;
+        justify-content: space-between;
+        background: $color-6;
+        .missao-main {
+          width: 15%;
+          h1 {
+            color: $white;
+          }
+        }
+        .missao-content {
+          width: 35%;
+          padding: 0 25px;
+          p {
+            color: $white;
+          }
+        }
+        .missao-img {
+          width: 50%;
+          height: 100%;
+        }
+      }
+      .estrutura {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .estrutura-main {
+          width: 40%;
+          align-items: flex-start;
+          .estrutura-title {
+            align-items: center;
+          }
+          .estrutura-content {
+            display: flex;
+          }
+        }
+        .estrutura-carousel {
+          width: 60%;
+        }
+      }
+    }
+  }
+  @include breakpoint(hd) {
+    .grid-container {
+      .sobre {
+        padding-left: 8%;
+      }
+      .missao {
+        padding-right: 8%;
+      }
+      .estrutura {
+        padding-left: 8%;
+        &.container {
+          max-width: none;
+        }
+        .estrutura-main {
+          padding-right: 65px;
+        }
+        .estrutura-carousel {
+          margin-right: 30px;
+          #secondary-slider {
+            .splide__arrows {
+              .splide__arrow {
+                width: 5%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(fullhd) {
+    .grid-container {
+      .estrutura {
+        .estrutura-carousel {
+          #secondary-slider {
+            .splide__track {
+              width: 80%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

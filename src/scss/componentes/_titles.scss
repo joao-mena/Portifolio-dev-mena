@@ -1,0 +1,181 @@
+﻿*[class^="title"] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.title {
+  &__headerPage {
+    @include titulo(30px, $white);
+    @include breakpoint(desktop) {
+      font-size: 50px;
+    }
+  }
+  &__contato {
+    @include titulo(30px, $gray-0, 39px);
+    margin: 10px 0;
+    @include breakpoint(desktop) {
+      font-size: 45px;
+    }
+  }
+  &__endereco {
+    @include titulo(30px, $gray-0, 39px);
+    margin: 10px 0;
+    @include breakpoint(desktop) {
+      font-size: 45px;
+    }
+  }
+  &__banner {
+    @include titulo(30px, $white, 35px);
+    margin-bottom: 10px;
+    @include breakpoint(desktop) {
+      font-size: 45px;
+      line-height: 40px;
+      margin-bottom: 25px;
+    }
+  }
+  &__bemVindo {
+    @include titulo(30px, $gray-0, 35px);
+    text-align: center;
+    @include breakpoint(tablet) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    @include breakpoint(desktop) {
+      font-size: 45px;
+    }
+    @include breakpoint(hd) {
+      margin-bottom: 80px;
+    }
+  }
+  &__cardbemVindo {
+    @include titulo(18px, $gray-0);
+    margin: 25px 0 35px;
+  }
+  &__profissionais {
+    @include titulo(30px, $gray-0);
+    margin: 40px 0;
+    @include breakpoint(tablet) {
+      font-size: 45px;
+      margin-bottom: 50px;
+    }
+  }
+  &__especialidades {
+    @include titulo(30px, $gray-0);
+    margin: 40px 0;
+    @include breakpoint(desktop) {
+      font-size: 45px;
+    }
+  }
+  &__blogHome {
+    @include titulo(30px, $gray-0);
+    margin: 40px 0;
+    @include breakpoint(hd) {
+      font-size: 45px;
+    }
+  }
+  &__quemSomos {
+    @include titulo(30px, $gray-0);
+    margin: 15px 0 30px;
+    @include breakpoint(desktop) {
+      font-size: 45px;
+    }
+  }
+  &__eventos {
+    @include titulo(30px, $white);
+    margin: 40px 0;
+    @include breakpoint(desktop) {
+      font-size: 45px;
+    }
+  }
+  &__prof-page {
+    display: none;
+    @include breakpoint(desktop) {
+      display: block;
+      margin: 40px 0;
+      text-align: center;
+      @include titulo(45px, $gray-0);
+    }
+  }
+  &__especialidades-page {
+    display: none;
+    @include breakpoint(desktop) {
+      display: block;
+      margin: 40px 0;
+      text-align: center;
+      @include titulo(45px, $gray-0);
+    }
+  }
+  &__especial {
+    position: absolute;
+    @include titulo(20px, $white, 35px);
+    bottom: 10px;
+    padding: 0 35px;
+    transition: $ease-0;
+    text-transform: uppercase;
+    @include breakpoint(tablet) {
+      font-size: 26px;
+      bottom: 30px;
+      padding: 0;
+    }
+    @include breakpoint(desktop) {
+      bottom: 50px;
+    }
+  }
+  &__especialidade {
+    @include titulo(18px, $gray-0);
+    text-transform: uppercase;
+  }
+  &__nome {
+    @include titulo(18px, $gray-0);
+    margin: 10px 0;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__name {
+    @include titulo(18px, $gray-0);
+    margin: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__evento {
+    @include titulo(18px, $white, 22px);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  &__blog-page {
+    @include titulo(14px, $white);
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    bottom: 45px;
+    padding: 10px 115px 10px 40px;
+    background: $color-1;
+    &--content {
+      @include titulo(20px, $gray-0, 35px);
+      margin: 35px 0;
+      text-transform: uppercase;
+    }
+  }
+  &__blogs {
+    @include titulo(20px, $white, 20px);
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 25px;
+    margin: 0 auto;
+    padding: 0 20px;
+    @include breakpoint(desktop) {
+      color: $gray-0;
+      bottom: 0;
+      font-size: 31px;
+      line-height: 40px;
+    }
+  }
+  &__modal {
+    @include titulo(20px, $gray-0, 20px);
+    @include breakpoint(desktop) {
+      color: $gray-0;
+      bottom: 0;
+      font-size: 31px;
+      line-height: 40px;
+    }
+  }
+}

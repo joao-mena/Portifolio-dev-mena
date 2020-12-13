@@ -1,0 +1,33 @@
+.main {
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+  .presencial {
+    background: $color-7;
+    color: $white;
+    transition: $ease-0;
+  }
+  @include breakpoint(tablet) {
+    margin-top: 0;
+  }
+}
+.container {
+  width: 100%;
+  @include breakpoint(tablet) {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  @include breakpoint(desktop) {
+    max-width: 960px;
+  }
+  @include breakpoint(hd) {
+    max-width: 1140px;
+  }
+  @include breakpoint(fullhd) {
+    max-width: 1600px;
+  }
+}
+
+.black {
+  color: $black !important;
+}

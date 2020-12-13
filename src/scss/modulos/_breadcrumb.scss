@@ -1,0 +1,44 @@
+.breadcrumb {
+  position: absolute;
+  left: 10%;
+  bottom: 35%;
+  margin: 0 auto;
+  .breadcrumbs {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    min-height: 30px;
+    flex-wrap: wrap;
+    li {
+      float: left;
+      color: $white;
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+      &:after {
+        content: "/";
+        padding: 0 5px;
+        color: $white;
+      }
+      &:last-child {
+        font-weight: 700;
+      }
+      &:last-child:after {
+        display: none;
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    bottom: 40%;
+    left: auto;
+  }
+  @include breakpoint(fullhd) {
+    bottom: 44%;
+  }
+}

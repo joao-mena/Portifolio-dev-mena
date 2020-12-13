@@ -1,0 +1,18 @@
+.blog-page {
+  display: flex;
+  flex-direction: column;
+  .bg-header {
+    position: relative;
+    .bg-title {
+      background: $color-1;
+    }
+  }
+  &__content {
+    padding: 0 40px;
+  }
+  @include breakpoint(desktop) {
+    &__content {
+      padding: 0;
+    }
+  }
+}

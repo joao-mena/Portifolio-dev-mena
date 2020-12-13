@@ -1,0 +1,133 @@
+.especialidades {
+  padding: 0 10% 10%;
+  position: relative;
+  h1 {
+    text-align: center;
+  }
+  #splide-especialidades {
+    overflow: hidden;
+    .splide {
+      &__track {
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+      }
+      &__list {
+        display: flex;
+      }
+      &__arrow {
+        &--prev {
+          left: 5px;
+        }
+        &--next {
+          right: 5px;
+        }
+      }
+      &__slide {
+        background: $gray-5;
+        position: relative;
+        outline: none;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        img {
+          width: 100%;
+        }
+        .infos {
+          padding: 20px 20px 30px;
+        }
+      }
+      &__pagination {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-flex;
+        align-items: center;
+        width: 95%;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0.5rem 0;
+        li {
+          .splide__pagination__page {
+            padding: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $gray-5;
+            margin: 0.2em;
+            cursor: pointer;
+            display: block;
+            &.is-active {
+              background: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    padding: 0 0 10%;
+    #splide-especialidades {
+      padding: 0 50px;
+      .splide {
+        &__arrow {
+          width: 4em;
+          height: 4em;
+          svg {
+            width: 2.2em;
+            height: 2.2em;
+          }
+          &--prev {
+            left: -10px;
+          }
+          &--next {
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(desktop) {
+    .cards {
+      &__content {
+        display: flex;
+        flex-direction: column;
+        transition: $ease-0;
+        &:hover {
+          transition: $ease-0;
+          background: $color-6;
+          h4,
+          p,
+          div[class^="btn"] {
+            color: $white;
+          }
+          div[class^="btn"] {
+            background: rgba(255, 255, 255, 0.5);
+          }
+        }
+        .infos {
+          height: 100%;
+        }
+      }
+    }
+  }
+  @include breakpoint(hd) {
+    #splide-especialidades {
+      padding: 0;
+      .splide {
+        &__arrow {
+          &--prev {
+            left: -70px;
+          }
+          &--next {
+            right: -70px;
+          }
+        }
+        &__pagination {
+          bottom: 5rem;
+        }
+      }
+    }
+  }
+}

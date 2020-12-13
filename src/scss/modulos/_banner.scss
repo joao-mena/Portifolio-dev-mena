@@ -1,0 +1,109 @@
+﻿.slide-banner {
+  height: 60vh;
+  position: relative;
+  .glide {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    &__track {
+      height: 100%;
+    }
+  }
+  .glide__bullets {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding-left: 35px;
+    button {
+      width: 8px;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      padding: 0;
+      margin: 0 4px;
+      transition: $ease-0;
+      cursor: pointer;
+      &.glide__bullet--active {
+        background: $white;
+      }
+    }
+  }
+  .sliders {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    .slide {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      .bg {
+        position: relative;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        padding: 0 35px;
+        top: 90px;
+        z-index: 2;
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    .glide__bullets {
+      padding-left: 0;
+    }
+    .sliders {
+      .slide {
+        .content {
+          left: 35px;
+          top: 25%;
+          padding: 0;
+        }
+      }
+    }
+  }
+  @include breakpoint(desktop) {
+    .glide {
+      .sliders {
+        .slide {
+          align-items: center;
+          .bg {
+            img {
+              object-fit: cover;
+              object-position: bottom;
+            }
+          }
+          .content {
+            margin: 0 auto;
+            left: auto;
+            top: 35%;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(hd) {
+    height: 75vh;
+    .glide__bullets {
+      bottom: 120px;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.contato {
+  &__cards {
+    padding: 35px 30px 50px;
+    display: flex;
+    flex-direction: column;
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .content__fale-conosco {
+    .infos {
+      margin-bottom: 30px;
+      p,
+      address {
+        line-height: 22px;
+      }
+      &__fale-conosco {
+        height: fit-content;
+        margin-top: 50px;
+        width: 100%;
+        background: $color-1;
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    &__cards {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+      }
+    }
+  }
+  @include breakpoint(desktop) {
+    .content__fale-conosco {
+      display: flex;
+      flex-direction: row-reverse;
+      .infos {
+        margin-bottom: 0;
+
+        &__fale-conosco {
+          margin-top: 0;
+          width: 50%;
+        }
+        &--endereco {
+          width: 50%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

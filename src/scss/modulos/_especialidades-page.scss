@@ -1,0 +1,104 @@
+.especialidades-page {
+  display: flex;
+  flex-direction: column;
+  .filtros {
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 20px auto;
+    legend {
+      padding: 0 10px;
+      @include texto(16px, $black);
+      font-weight: 700;
+    }
+    .btn__filtro {
+      input {
+        display: none;
+      }
+    }
+  }
+  .cards-especialidades {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .card {
+      width: 100%;
+      background: $gray-5;
+      margin-bottom: 15px;
+      &__titles {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+      &__content {
+        display: flex;
+        flex-direction: column;
+      }
+      &__buttons {
+        display: flex;
+        flex-direction: row;
+        padding: 0 35px;
+        button {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+  @include breakpoint(tablet) {
+    .card {
+      &__buttons {
+        padding: 0 !important;
+      }
+    }
+  }
+  @include breakpoint(desktop) {
+    .filtros {
+      width: 50%;
+      .btn__filtro {
+        cursor: pointer;
+        transition: $ease-0;
+        label {
+          transition: $ease-0;
+        }
+        &:hover {
+          transition: $ease-0;
+          background: $color-7;
+          label {
+            transition: $ease-0;
+            color: $white;
+          }
+        }
+      }
+    }
+    .cards-especialidades {
+      .card {
+        margin-bottom: 50px;
+        transition: $ease-0;
+        &:hover {
+          transition: $ease-0;
+          background: $color-6;
+          .card__titles {
+            h2 {
+              color: $gray-0;
+              transition: $ease-0;
+            }
+          }
+          .card__content {
+            p {
+              transition: $ease-0;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
