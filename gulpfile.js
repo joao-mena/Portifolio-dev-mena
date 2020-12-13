@@ -41,7 +41,7 @@ function images() {
 }
 
 function screenshot() {
-  return src([paths.src + '/screenshot.png'])
+  return src([paths.src + '/screenshot.jpg'])
     .pipe(imagemin())
     .pipe(dest(paths.dest));
 }
@@ -129,7 +129,6 @@ function jsServer() {
 function libsCss() {
   return src([
     'node_modules/reset-css/reset.css',
-    'node_modules/@glidejs/glide/dist/css/glide.core.css',
     'node_modules/@splidejs/splide/dist/css/splide.min.css',
   ])
     .pipe(changed(paths.dest + 'css'))
@@ -143,7 +142,6 @@ function libsCss() {
 function libsJS() {
   return src([
     'node_modules/vanilla-masker/build/vanilla-masker.min.js',
-    'node_modules/@glidejs/glide/dist/glide.js',
     'node_modules/@splidejs/splide/dist/js/splide.min.js',
   ])
     .pipe(changed(paths.dest + 'js/libs'))
