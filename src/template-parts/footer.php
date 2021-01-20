@@ -67,6 +67,6 @@
         </div>
     </div>
     <div class="copy">
-        <p>Todos os direitos Reservados © 2020. <br>Desenvolvido por <a href="http://www.codeduck.com.br" target="_blank">codeduck</a></p>
+        <p>Todos os direitos Reservados © 2020. <br>Desenvolvido por <a href="http://www.devmena.com.br" target="_blank">devmena</a></p>
     </div>
 </footer>

@@ -1,10 +1,9 @@
 /*!
-* Theme name: Theme Alianza Cormeticos
-* Theme URI: http://www.alianzacosmeticos.com.br
-* Author: Felipe Volpato
-* Author URL: http://codeduck.com.br/
-* Description: Site desenvolvido para Alianza Cormeticos
-* Version: 2.0.0
+* Theme name: Portifolio DevMena
+* Theme URI: http://www.devMena.com.br
+* Author: Joao Victor Semeao Mena
+* Description: Site Pessoal
+* Version: 1.0.0
 */
 
 @import "base/variaveis";
@@ -16,22 +15,8 @@
 
 //modulos
 @import "modulos/header";
-@import "modulos/header-page";
-@import "modulos/footer";
-@import "modulos/bem-vindo";
-@import "modulos/banner";
 @import "modulos/map";
-@import "modulos/breadcrumb";
-@import "modulos/quem-somos";
-@import "modulos/profissionais-home";
-@import "modulos/blog-home";
-@import "modulos/blog-page";
-@import "modulos/blogs-page";
-@import "modulos/eventos-page";
-@import "modulos/profissionais-page";
-@import "modulos/especialidades-page";
-@import "modulos/eventos-home";
-@import "modulos/especialidades-home";
+@import "modulos/footer";
 
 // components
 @import "componentes/social-menu";

@@ -5,7 +5,7 @@
   ** ***** ----------------------------------------------- ***** */
 
   // Clean up Wordpress head
-  function codeduck_head_cleanup() {
+  function devmena_head_cleanup() {
 
     remove_action( 'wp_head', 'rsd_link' ); // EditURI link
     remove_action( 'wp_head', 'rest_output_link_wp_head', 10 ); // Remove REST API link
@@ -24,22 +24,22 @@
     add_filter( 'emoji_svg_url', '__return_false' ); // Remove Emoji DNS prefetch
 
   }
-  add_action( 'init', 'codeduck_head_cleanup' );
+  add_action( 'init', 'devmena_head_cleanup' );
 
   // Remove WP version from RSS
-  function codeduck_remove_rss_version() { 
+  function devmena_remove_rss_version() { 
     return '';
   }
-  add_filter( 'the_generator', 'codeduck_remove_rss_version' );
+  add_filter( 'the_generator', 'devmena_remove_rss_version' );
 
   // Remove 'text/css' from our enqueued stylesheet
-  function codeduck_style_remove( $tag ) {
+  function devmena_style_remove( $tag ) {
     return preg_replace( '~\s+type=["\'][^"\']++["\']~', '', $tag );
   }
-  add_filter( 'style_loader_tag', 'codeduck_style_remove' );
+  add_filter( 'style_loader_tag', 'devmena_style_remove' );
 
   // Remove wp_head() injected Recent Comment styles
-  function codeduck_remove_recent_comments_style(){
+  function devmena_remove_recent_comments_style(){
     global $wp_widget_factory;
 
     remove_action( 'wp_head', array(
@@ -47,7 +47,7 @@
       'recent_comments_style'
     ));
   }
-  add_action( 'widgets_init', 'codeduck_remove_recent_comments_style' );
+  add_action( 'widgets_init', 'devmena_remove_recent_comments_style' );
 
 
 ?>
